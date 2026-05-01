@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.event.controller.EventController">
+
+    <!-- 🔝 TOP INPUT FORM -->
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10; -fx-alignment: center-left;">
+
+            <TextField fx:id="nameField" promptText="Event Name" prefWidth="120"/>
+            <TextField fx:id="locationField" promptText="Location" prefWidth="120"/>
+
+            <!-- 🔥 NEW DATE PICKER -->
+            <DatePicker fx:id="datePicker" promptText="Event Date" prefWidth="140"/>
+
+            <TextField fx:id="priceField" promptText="Price" prefWidth="80"/>
+
+            <Button fx:id="addBtn" text="Add" onAction="#handleAdd"/>
+            <Button fx:id="deleteBtn" text="Delete" onAction="#handleDelete"/>
+            <Button fx:id="bookBtn" text="Book" onAction="#handleBook"/>
+
+        </HBox>
+    </top>
+
+    <!-- 📊 TABLE -->
+    <center>
+        <TableView fx:id="eventTable">
+
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="nameCol" text="Name" prefWidth="150"/>
+                <TableColumn fx:id="locationCol" text="Location" prefWidth="120"/>
+
+                <!-- 🔥 NEW DATE COLUMN -->
+                <TableColumn fx:id="dateCol" text="Date" prefWidth="120"/>
+
+                <TableColumn fx:id="priceCol" text="Price" prefWidth="80"/>
+            </columns>
+
+        </TableView>
+    </center>
+
+</BorderPane>

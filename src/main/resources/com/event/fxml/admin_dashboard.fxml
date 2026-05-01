@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.event.controller.AdminDashboardController">
+
+    <!-- TOP -->
+    <top>
+        <Label text="Admin Dashboard"
+               style="-fx-font-size: 20px; -fx-padding: 10;"/>
+    </top>
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Button text="Manage Events" onAction="#loadEvents"/>
+            <Button text="Manage Users" onAction="#loadUsers"/>
+            <Button text="View Bookings" onAction="#loadBookings"/>
+            <Button text="Logout" onAction="#logout"/>
+        </VBox>
+    </left>
+
+    <!-- CENTER CONTENT -->
+    <center>
+        <StackPane fx:id="contentArea"/>
+    </center>
+
+</BorderPane>
